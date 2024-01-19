@@ -1,12 +1,14 @@
+import os
 from jira import JIRA
 from dotenv import load_dotenv
 
 
 load_dotenv()
 
-jira = JIRA(
-    url='https://jira.atlassian.com',
-    api_key='api_key',)
+os.getenv('API_KEY')
+
+jira = JIRA(url='https://jira.atlassian.com',
+            basic_auth=('username', os.getenv('API_KEY')))
 
 
 def create_ticket(project, summary, description, issue_type):
