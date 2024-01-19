@@ -19,7 +19,7 @@ def create_ticket(project, summary, description, issue_type):
         'issuetype': {'name': issue_type},
     }
     new_issue = jira.create_issue(fields=fields)
-    print(f"Created new ticket: {new_issue.key}")
+    print(f"New ticket created sucessfully, ticket id: {new_issue.key}")
     return new_issue
 
 
