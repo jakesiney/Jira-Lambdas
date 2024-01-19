@@ -1,5 +1,5 @@
 import os
-from jira import JIRA
+from atlassian import JIRA
 from dotenv import load_dotenv
 
 
